@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stance and Motion Workout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Stance and Motion Workout</h1>
+
+    <label for="category">Select Category:</label>
+    <select id="category">
+      <option value="offense">Offense</option>
+      <option value="defense">Defense</option>
+      <option value="bottom">Bottom</option>
+    </select>
+
+    <label for="workout-duration">Select Workout Duration (Minutes):</label>
+    <select id="workout-duration">
+      <option value="1">1 Minute</option>
+      <option value="2">2 Minutes</option>
+      <option value="3">3 Minutes</option>
+      <option value="4">4 Minutes</option>
+      <option value="5">5 Minutes</option>
+      <option value="6">6 Minutes</option>
+      <option value="7">7 Minutes</option>
+      <option value="8">8 Minutes</option>
+      <option value="9">9 Minutes</option>
+      <option value="10">10 Minutes</option>
+    </select>
+
+    <button id="start-workout">Start Workout</button>
+
+    <div id="instruction-display">
+      <p id="instruction">Press Start to Begin</p>
+    </div>
+
+    <div id="timer-display">
+      <p id="timer"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
