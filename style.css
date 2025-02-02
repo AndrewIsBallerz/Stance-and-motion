@@ -1,147 +1,155 @@
-/* styles.css */
+/* Global styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-  }
-  
-  .container {
-    text-align: center;
-    background-color: white;
-    padding: 30px 40px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    width: 320px;
-    max-width: 100%;
-  }
-  
-  h1 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  label {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  select, button {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
-  }
-  
-  select:focus, button:focus {
-    outline: none;
-    border-color: #4CAF50;
-  }
-  
-  button {
-    cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
-    font-weight: bold;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  #instruction-display {
-    margin-top: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  #timer-display {
-    margin-top: 20px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    border-radius: 10px;
-    border: 2px solid #4CAF50;
-    padding: 15px;
-    width: 150px;
-    margin: 20px auto;
-    background-color: #f9f9f9;
-  }
-  
-  select, button, #instruction-display, #timer-display {
-    font-weight: bold;
-  }
-  
-  /* Adding responsiveness */
-  @media (max-width: 480px) {
-    .container {
-      padding: 20px;
-      width: 90%;
-    }
-  
-    h1 {
-      font-size: 20px;
-    }
-  
-    select, button, #instruction-display, #timer-display {
-      font-size: 14px;
-    }
-  }
-  #pause-workout {
-    cursor: pointer;
-    background-color: #ff9800; /* Orange color for pause */
-    color: white;
-    font-weight: bold;
-  }
-  
-  #pause-workout:hover {
-    background-color: #f57c00; /* Darker orange on hover */
-  }
-  
-  #pause-workout:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  /* Style for instruction buttons */
-.instruction-button {
-  display: inline-block;
-  margin: 5px;
-  padding: 10px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-weight: bold; /* Make all text bold */
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 10px;
+}
+
+select, button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  font-weight: bold; /* Ensure the text inside select and button is bold */
+}
+
+select:focus, button:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+button {
+  cursor: pointer;
   background-color: #4CAF50;
   color: white;
-  border: none;
-  border-radius: 5px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#instruction-display {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+#timer-display {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  border-radius: 10px;
+  border: 2px solid #4CAF50;
+  padding: 15px;
+  width: 150px;
+  margin: 20px auto;
+  background-color: #f9f9f9;
+}
+
+#pause-workout {
   cursor: pointer;
+  background-color: #ff9800; /* Orange color for pause */
+  color: white;
+  font-weight: bold;
 }
 
-/* Style for selected instruction buttons */
-.instruction-button.selected {
-  background-color: #ff9800; /* Orange color for selected instructions */
+#pause-workout:hover {
+  background-color: #f57c00; /* Darker orange on hover */
 }
 
-/* Style for the custom instructions container */
+#pause-workout:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Custom instruction list styles */
 #custom-instructions-container {
   margin-top: 20px;
+  max-height: 300px;  /* Increase the height to allow more instructions to be visible */
+  overflow-y: auto;   /* Makes the instructions scrollable */
+  padding-right: 10px; /* Ensure that scroll doesn't overlap with text */
 }
 
-#custom-instructions-container h3 {
+#instruction-list {
+  list-style-type: none;
+  padding: 0;
   margin-bottom: 10px;
-  font-size: 18px;
-  color: #333;
+}
+
+.instruction-button {
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #4CAF50; /* Default background color is green */
+  font-weight: bold;  /* Ensure instruction buttons text is bold */
+  color: white;
+  text-align: center;  /* Ensure text is centered */
+}
+
+.instruction-button.selected {
+  background-color: #ff9800; /* Change to orange when clicked */
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+  .container {
+      padding: 20px;
+      width: 90%;
+  }
+
+  h1 {
+      font-size: 20px;
+  }
+
+  select, button, #instruction-display, #timer-display {
+      font-size: 14px;
+  }
+
+  #custom-instructions-container {
+      max-height: 200px;  /* Reduce height for smaller screens */
+  }
+}
+
+/* Styling for the container */
+.container {
+  text-align: center;
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  max-width: 100%;
 }
