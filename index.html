@@ -10,13 +10,22 @@
   <div class="container">
     <h1>Stance and Motion Workout</h1>
 
+    <!-- Category Selection -->
     <label for="category">Select Category:</label>
     <select id="category">
       <option value="offense">Offense</option>
       <option value="defense">Defense</option>
       <option value="bottom">Bottom</option>
+      <option value="custom">Custom</option>
     </select>
 
+    <!-- Custom Instructions Container -->
+    <div id="custom-instructions-container" style="display: none;">
+      <h3>Select Instructions for Custom Workout</h3>
+      <div id="instruction-list"></div>
+    </div>
+
+    <!-- Workout Duration Selection -->
     <label for="workout-duration">Select Workout Duration (Minutes):</label>
     <select id="workout-duration">
       <option value="1">1 Minute</option>
@@ -31,12 +40,16 @@
       <option value="10">10 Minutes</option>
     </select>
 
+    <!-- Start and Pause Buttons -->
     <button id="start-workout">Start Workout</button>
+    <button id="pause-workout" disabled>Pause Workout</button>
 
+    <!-- Instruction Display -->
     <div id="instruction-display">
       <p id="instruction">Press Start to Begin</p>
     </div>
 
+    <!-- Timer Display -->
     <div id="timer-display">
       <p id="timer"></p>
     </div>

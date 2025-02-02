@@ -103,3 +103,45 @@
       font-size: 14px;
     }
   }
+  #pause-workout {
+    cursor: pointer;
+    background-color: #ff9800; /* Orange color for pause */
+    color: white;
+    font-weight: bold;
+  }
+  
+  #pause-workout:hover {
+    background-color: #f57c00; /* Darker orange on hover */
+  }
+  
+  #pause-workout:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  /* Style for instruction buttons */
+.instruction-button {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style for selected instruction buttons */
+.instruction-button.selected {
+  background-color: #ff9800; /* Orange color for selected instructions */
+}
+
+/* Style for the custom instructions container */
+#custom-instructions-container {
+  margin-top: 20px;
+}
+
+#custom-instructions-container h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
